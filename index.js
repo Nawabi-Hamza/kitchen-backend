@@ -16,6 +16,10 @@ const postRouter = require("./src/routes/posts")
 app.use("/auth",userRouter)
 app.use("/posts",postRouter)
 
+app.get("/",(req,res)=>{
+    res.send("Hello This is backend")
+    // res.closed()
+})
 
 
 app.listen(port,()=>console.log("Server Started In Port " + port))
